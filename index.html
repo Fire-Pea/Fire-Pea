@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fire Pea</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Subtle scanline texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.015) 2px,
+        rgba(255,255,255,0.015) 4px
+      );
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 56px;
+    }
+
+    /* Title */
+    .title {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      animation: flicker 6s infinite;
+    }
+
+    .title::after {
+      content: 'Fire Pea';
+      position: absolute;
+      inset: 0;
+      color: #fff;
+      text-shadow:
+        0 0 8px rgba(255,255,255,0.8),
+        0 0 30px rgba(255,120,0,0.5),
+        0 0 60px rgba(255,60,0,0.3);
+      animation: glow-pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.75; }
+    }
+
+    @keyframes flicker {
+      0%, 95%, 100% { opacity: 1; }
+      96%           { opacity: 0.85; }
+      97%           { opacity: 1; }
+      98%           { opacity: 0.6; }
+      99%           { opacity: 1; }
+    }
+
+    /* Nav buttons */
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 320px;
+    }
+
+    nav a {
+      display: block;
+      width: 100%;
+      padding: 14px 0;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      background: #000;
+      border: 1px solid #fff;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.18s ease, background 0.18s ease;
+      /* staggered entrance */
+      opacity: 0;
+      transform: translateY(12px);
+      animation: rise 0.5s forwards;
+    }
+
+    nav a:nth-child(1) { animation-delay: 0.1s; }
+    nav a:nth-child(2) { animation-delay: 0.2s; }
+    nav a:nth-child(3) { animation-delay: 0.3s; }
+    nav a:nth-child(4) { animation-delay: 0.4s; }
+    nav a:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Corner decorations */
+    .corner {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      opacity: 0.25;
+    }
+    .corner--tl { top: 20px; left: 20px; border-top: 1px solid #fff; border-left: 1px solid #fff; }
+    .corner--tr { top: 20px; right: 20px; border-top: 1px solid #fff; border-right: 1px solid #fff; }
+    .corner--bl { bottom: 20px; left: 20px; border-bottom: 1px solid #fff; border-left: 1px solid #fff; }
+    .corner--br { bottom: 20px; right: 20px; border-bottom: 1px solid #fff; border-right: 1px solid #fff; }
+  </style>
+</head>
+<body>
+
+  <div class="corner corner--tl"></div>
+  <div class="corner corner--tr"></div>
+  <div class="corner corner--bl"></div>
+  <div class="corner corner--br"></div>
+
+  <div class="container">
+    <h1 class="title">Fire Pea</h1>
+
+    <nav>
+      <a href="keplerner.html">Keplerner</a>
+      <a href="hybrids.html">Hybrids</a>
+      <a href="http://www.youtube.com/@Fire_Peashooter" target="_blank" rel="noopener">YouTube</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="k11-collection.html">K-11 Collection</a>
+    </nav>
+  </div>
+
+</body>
+</html>

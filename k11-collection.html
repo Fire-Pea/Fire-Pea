@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kryption-11</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      padding: 60px 40px 80px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Back button */
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 48px;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 6px 16px;
+      letter-spacing: 0.08em;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .back-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .back-btn::before {
+      content: '← ';
+    }
+
+    /* Title */
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #fff;
+      margin-bottom: 48px;
+    }
+
+    /* Series cards */
+    .series {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #333;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .series:hover {
+      border-color: #fff;
+      background: #0a0a0a;
+    }
+
+    .series-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 8px;
+    }
+
+    .series-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .series-desc {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      opacity: 0.7;
+    }
+
+    .series-arrow {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      opacity: 0.4;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 72px;
+      font-size: 0.75rem;
+      opacity: 0.35;
+      letter-spacing: 0.1em;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Bottom-right floating buttons */
+    .corner-buttons {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .corner-btn {
+      display: inline-block;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid #555;
+      padding: 5px 12px;
+      background: #000;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+    }
+
+    .corner-btn:hover {
+      border-color: #fff;
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <a class="back-btn" href="index.html">Back</a>
+
+    <div class="subtitle">Kryption-11</div>
+    <h1>K-11 Collection</h1>
+    <hr class="divider" />
+
+    <!-- SERIES 1 -->
+    <a class="series" href="CrownSMP.html">
+      <div class="series-label">Series 001</div>
+      <div class="series-title">CrownSMP</div>
+      <div class="series-desc">A Hardcore minecraft server with a lives system to raise the stakes by a lot.</div>
+      <span class="series-arrow">ENTER →</span>
+    </a>
+
+    <!-- SERIES 2 -->
+    <a class="series" href="HorizonImpact.html">
+      <div class="series-label">Series 002</div>
+      <div class="series-title">Horizon Impact</div>
+      <div class="series-desc">An ambitious science fantasy series with a complex power system most people don't understand but is highly balanced and nuanced.</div>
+      <span class="series-arrow">ENTER →</span>
+    </a>
+
+    <!-- Add more series below by copying the block above -->
+
+    <footer>
+      Kryption-11 &mdash; K is the 11th letter.
+    </footer>
+
+  </div>
+
+  <!-- Bottom-right corner buttons -->
+  <div class="corner-buttons">
+    <a class="corner-btn" href="bio.html">Bios</a>
+    <a class="corner-btn" href="achievements.html">Achievements</a>
+  </div>
+
+</body>
+</html>
